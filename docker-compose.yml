@@ -1,0 +1,13 @@
+services:
+
+  nginx:
+    container_name: osmproxy_nginx
+    hostname: nginx
+    restart: always
+    image: nginx:latest
+    environment:
+      - TZ=Europe/Paris
+    volumes:
+      - "./nginx.conf:/etc/nginx/nginx.conf"
+    ports:
+      - "${DOCKER_IP:-127.0.0.1}:${DOCKER_PORT:-8080}:80"
