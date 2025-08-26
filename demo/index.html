@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+</head>
+
+<body>
+    <div id="app" style="width: 640px; height: 480px"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        const map = L.map("app").setView([47.650002, 7.26667], 13);
+        L.tileLayer("http://127.0.0.1:8080/{z}/{x}/{y}.png").addTo(map);
+    </script>
+</body>
+
+</html>
